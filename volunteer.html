@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Basti Ki Pathshala Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- PLACE YOUR LOGO HERE: Replace 'img/logo.png' with your actual logo file -->
+                <img src="img/logo.png" alt="Basti Ki Pathshala Logo" class="logo">
+                Basti Ki Pathshala
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="volunteer.html">Volunteer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Volunteer Section -->
+    <section class="volunteer-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-5">
+                    <h1 class="mb-3">Join Our Mission</h1>
+                    <p class="lead max-w-700 mx-auto">Become a catalyst for change in underprivileged communities. Your skills, passion, and time can transform lives.</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="volunteer-form-container">
+                        <div class="form-progress d-flex justify-content-between mb-4">
+                            <div class="progress-step active" data-step="1">
+                                <div class="step-number">1</div>
+                                <div class="step-label">Personal Info</div>
+                            </div>
+                            <div class="progress-step" data-step="2">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Skills & Interests</div>
+                            </div>
+                            <div class="progress-step" data-step="3">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Availability</div>
+                            </div>
+                            <div class="progress-step" data-step="4">
+                                <div class="step-number">4</div>
+                                <div class="step-label">Submit</div>
+                            </div>
+                        </div>
+                        
+                        <form id="volunteerForm" class="multi-step-form">
+                            <!-- Step 1: Personal Information -->
+                            <div class="form-step active" data-step="1">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-4">
+                                        <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                            <input type="email" class="form-control" id="email" placeholder="your.email@example.com" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-4">
+                                        <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                            <input type="tel" class="form-control" id="phone" placeholder="+91 XXX XXX XXXX" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-4">
+                                        <label for="age" class="form-label">Age Group</label>
+                                        <select class="form-select" id="age">
+                                            <option value="" selected disabled>Select your age group</option>
+                                            <option value="18-25">18-25 years</option>
+                                            <option value="26-35">26-35 years</option>
+                                            <option value="36-50">36-50 years</option>
+                                            <option value="50+">50+ years</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-12 mb-4">
+                                        <label for="address" class="form-label">Address</label>
+                                        <textarea class="form-control" id="address" rows="2" placeholder="Enter your current address"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <div></div> <!-- Empty div for spacing -->
+                                    <button type="button" class="btn btn-primary next-step" data-next="2">Next <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2: Skills & Interests -->
+                            <div class="form-step" data-step="2">
+                                <div class="mb-4">
+                                    <label class="form-label">What skills can you contribute? <span class="text-danger">*</span></label>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="skill-card">
+                                                <input type="checkbox" class="btn-check" id="skill1" name="skills" value="Teaching">
+                                                <label class="btn btn-outline-primary w-100" for="skill1">
+                                                    <i class="fas fa-chalkboard-teacher me-2"></i> Teaching
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="skill-card">
+                                                <input type="checkbox" class="btn-check" id="skill2" name="skills" value="Healthcare">
+                                                <label class="btn btn-outline-primary w-100" for="skill2">
+                                                    <i class="fas fa-heartbeat me-2"></i> Healthcare
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="skill-card">
+                                                <input type="checkbox" class="btn-check" id="skill3" name="skills" value="Administration">
+                                                <label class="btn btn-outline-primary w-100" for="skill3">
+                                                    <i class="fas fa-tasks me-2"></i> Administration
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="skill-card">
+                                                <input type="checkbox" class="btn-check" id="skill4" name="skills" value="Fundraising">
+                                                <label class="btn btn-outline-primary w-100" for="skill4">
+                                                    <i class="fas fa-hand-holding-usd me-2"></i> Fundraising
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="skill-card">
+                                                <input type="checkbox" class="btn-check" id="skill5" name="skills" value="Technology">
+                                                <label class="btn btn-outline-primary w-100" for="skill5">
+                                                    <i class="fas fa-laptop-code me-2"></i> Technology
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="skill-card">
+                                                <input type="checkbox" class="btn-check" id="skill6" name="skills" value="Creative">
+                                                <label class="btn btn-outline-primary w-100" for="skill6">
+                                                    <i class="fas fa-paint-brush me-2"></i> Creative Arts
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label">Areas of Interest <span class="text-danger">*</span></label>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="interest-card">
+                                                <input type="radio" class="btn-check" name="interest" id="interest1" value="Education" required>
+                                                <label class="btn btn-outline-success w-100" for="interest1">
+                                                    <i class="fas fa-graduation-cap me-2"></i> Education
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="interest-card">
+                                                <input type="radio" class="btn-check" name="interest" id="interest2" value="Healthcare">
+                                                <label class="btn btn-outline-success w-100" for="interest2">
+                                                    <i class="fas fa-clinic-medical me-2"></i> Healthcare
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="interest-card">
+                                                <input type="radio" class="btn-check" name="interest" id="interest3" value="Community">
+                                                <label class="btn btn-outline-success w-100" for="interest3">
+                                                    <i class="fas fa-users me-2"></i> Community Dev
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="1"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                    <button type="button" class="btn btn-primary next-step" data-next="3">Next <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3: Availability -->
+                            <div class="form-step" data-step="3">
+                                <div class="mb-4">
+                                    <label class="form-label">When are you available to volunteer? <span class="text-danger">*</span></label>
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="availability-card">
+                                                <input type="checkbox" class="btn-check" id="avail1" name="availability" value="Weekdays">
+                                                <label class="btn btn-outline-info w-100" for="avail1">
+                                                    <i class="fas fa-sun me-2"></i> Weekdays
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="availability-card">
+                                                <input type="checkbox" class="btn-check" id="avail2" name="availability" value="Weekends">
+                                                <label class="btn btn-outline-info w-100" for="avail2">
+                                                    <i class="fas fa-calendar-week me-2"></i> Weekends
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6 mb-3">
+                                            <div class="availability-card">
+                                                <input type="checkbox" class="btn-check" id="avail3" name="availability" value="Evenings">
+                                                <label class="btn btn-outline-info w-100" for="avail3">
+                                                    <i class="fas fa-moon me-2"></i> Evenings
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="commitment" class="form-label">How much time can you commit weekly?</label>
+                                    <select class="form-select" id="commitment">
+                                        <option value="" selected disabled>Select commitment level</option>
+                                        <option value="1-2 hours">1-2 hours</option>
+                                        <option value="3-5 hours">3-5 hours</option>
+                                        <option value="5-10 hours">5-10 hours</option>
+                                        <option value="10+ hours">10+ hours</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="motivation" class="form-label">What motivates you to volunteer with us? <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="motivation" rows="3" placeholder="Share what drives your passion for community service..." required></textarea>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="2"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                    <button type="button" class="btn btn-primary next-step" data-next="4">Next <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 4: Submit -->
+                            <div class="form-step" data-step="4">
+                                <div class="text-center mb-4">
+                                    <div class="success-icon mb-3">
+                                        <i class="fas fa-hands-helping fa-3x text-success"></i>
+                                    </div>
+                                    <h3>Ready to Make a Difference?</h3>
+                                    <p class="text-muted">Review your information before submitting</p>
+                                </div>
+                                
+                                <div class="review-section bg-light p-4 rounded mb-4">
+                                    <h5 class="mb-3">Application Summary</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p><strong>Name:</strong> <span id="reviewName">-</span></p>
+                                            <p><strong>Email:</strong> <span id="reviewEmail">-</span></p>
+                                            <p><strong>Phone:</strong> <span id="reviewPhone">-</span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p><strong>Skills:</strong> <span id="reviewSkills">-</span></p>
+                                            <p><strong>Interest:</strong> <span id="reviewInterest">-</span></p>
+                                            <p><strong>Availability:</strong> <span id="reviewAvailability">-</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the <a href="#" class="text-primary">Volunteer Terms & Conditions</a> and confirm that all information provided is accurate.
+                                    </label>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="3"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                    <button type="submit" class="btn btn-success">Submit Application <i class="fas fa-paper-plane ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body p-5">
+                    <div class="success-icon mb-4">
+                        <i class="fas fa-check-circle fa-4x text-success"></i>
+                    </div>
+                    <h3 class="mb-3">Application Submitted!</h3>
+                    <p class="mb-4">Thank you for your interest in volunteering with Basti Ki Pathshala Foundation. Our team will review your application and contact you soon.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Basti Ki Pathshala Foundation</h5>
+                    <p>Working towards education and empowerment of underprivileged communities since 2010.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Community Street, Delhi</li>
+                        <li><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@bastikipathshala.org</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                       <a href="https://www.facebook.com/people/Basti-Ki-pathshala/61578128151722/#about" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bastikipathshala.ngo/" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/bastikipathshala" target="_blank" rel="noopener noreferrer" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2023 Basti Ki Pathshala Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Multi-step form navigation
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const formSteps = document.querySelectorAll('.form-step');
+            const progressSteps = document.querySelectorAll('.progress-step');
+            
+            // Next button functionality
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const nextStep = parseInt(this.getAttribute('data-next'));
+                    showStep(nextStep);
+                });
+            });
+            
+            // Previous button functionality
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const prevStep = parseInt(this.getAttribute('data-prev'));
+                    showStep(prevStep);
+                });
+            });
+            
+            // Show specific step
+            function showStep(stepNumber) {
+                // Hide all steps
+                formSteps.forEach(step => {
+                    step.classList.remove('active');
+                });
+                
+                // Remove active class from all progress steps
+                progressSteps.forEach(step => {
+                    step.classList.remove('active');
+                });
+                
+                // Show current step
+                document.querySelector(`.form-step[data-step="${stepNumber}"]`).classList.add('active');
+                
+                // Update progress
+                for (let i = 1; i <= stepNumber; i++) {
+                    document.querySelector(`.progress-step[data-step="${i}"]`).classList.add('active');
+                }
+            }
+            
+            // Form submission
+            const volunteerForm = document.getElementById('volunteerForm');
+            volunteerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Collect form data for review
+                document.getElementById('reviewName').textContent = document.getElementById('fullName').value;
+                document.getElementById('reviewEmail').textContent = document.getElementById('email').value;
+                document.getElementById('reviewPhone').textContent = document.getElementById('phone').value;
+                
+                // Collect skills
+                const selectedSkills = [];
+                document.querySelectorAll('input[name="skills"]:checked').forEach(skill => {
+                    selectedSkills.push(skill.value);
+                });
+                document.getElementById('reviewSkills').textContent = selectedSkills.join(', ') || '-';
+                
+                // Collect interest
+                const interest = document.querySelector('input[name="interest"]:checked');
+                document.getElementById('reviewInterest').textContent = interest ? interest.value : '-';
+                
+                // Collect availability
+                const availability = [];
+                document.querySelectorAll('input[name="availability"]:checked').forEach(avail => {
+                    availability.push(avail.value);
+                });
+                document.getElementById('reviewAvailability').textContent = availability.join(', ') || '-';
+                
+                // Show success modal
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+                
+                // Reset form after submission
+                setTimeout(() => {
+                    volunteerForm.reset();
+                    showStep(1);
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+/* Base Styles */
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #1cc88a;
+    --accent-color: #36b9cc;
+    --dark-color: #2a3f5f;
+    --light-color: #f8f9fc;
+    --success-color: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/background.jpg') center/cover no-repeat fixed;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #343a40;
+    color: white;
+}
+
+.hero-section .hero-image {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2e59d9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Counting Animation Section */
+.counting-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px 0;
+}
+
+.count-box {
+    text-align: center;
+    padding: 25px 15px;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.count-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.count-box h2 {
+    font-size: 2.8rem;
+    color: #FFD700; /* Gold color for numbers */
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.count-box:hover h2 {
+    color: #FFEC8B; /* Lighter gold on hover */
+    transform: scale(1.05);
+}
+
+.count-box p {
+    font-size: 1.1rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #FFFFFF; /* White text for labels */
+    opacity: 0.9;
+}
+
+/* Our Work Section */
+.our-work {
+    background-color: var(--light-color);
+}
+
+.work-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.work-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.work-card .card-title {
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/* About Section */
+.about-section {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.about-section h2 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.about-section img {
+    transition: transform 0.3s;
+}
+
+.about-section img:hover {
+    transform: scale(1.03);
+}
+
+/* Counting Animation in About Section */
+.about-counting-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 50px 0;
+    margin: 40px 0;
+    border-radius: 15px;
+}
+
+/* Volunteer Section */
+.volunteer-section {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.volunteer-form-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Progress */
+.form-progress {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.form-progress::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.progress-step {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.step-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.progress-step.active .step-number {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.progress-step.active .step-label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Form Steps */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Groups */
+.input-group-text {
+    background-color: var(--light-color);
+    border-color: #ddd;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+}
+
+/* Skill & Interest Cards */
+.skill-card .btn, .interest-card .btn, .availability-card .btn {
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.skill-card .btn-check:checked + .btn, 
+.interest-card .btn-check:checked + .btn,
+.availability-card .btn-check:checked + .btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(78, 115, 223, 0.3);
+}
+
+.skill-card .btn:hover, 
+.interest-card .btn:hover,
+.availability-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Review Section */
+.review-section {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Success Icon */
+.success-icon {
+    color: var(--success-color);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+}
+
+footer h5 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+footer h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    color: var(--primary-color) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .about-section img {
+        margin-bottom: 20px;
+    }
+    
+    .work-card {
+        margin-bottom: 20px;
+    }
+    
+    .volunteer-form-container {
+        padding: 1.5rem;
+    }
+    
+    .form-progress {
+        margin-bottom: 2rem;
+    }
+    
+    .step-label {
+        font-size: 0.7rem;
+    }
+    
+    .hero-section .hero-image {
+        min-height: 300px;
+    }
+    
+    .count-box h2 {
+        font-size: 2.2rem;
+    }
+    
+    .counting-section {
+        padding: 30px 0;
+    }
+    
+    .count-box {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .logo {
+        height: 30px;
+    }
+    
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .volunteer-form-container {
+        padding: 1rem;
+    }
+    
+    .form-progress {
+        margin-bottom: 1.5rem;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .step-label {
+        display: none;
+    }
+    
+    .hero-section .hero-image {
+        min-height: 250px;
+    }
+    
+    .count-box h2 {
+        font-size: 1.8rem;
+    }
+    
+    .count-box {
+        padding: 15px 8px;
+        margin-bottom: 15px;
+    }
+    
+    .count-box p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Utility Classes */
+.max-w-700 {
+    max-width: 700px;
+}
+
+.text-danger {
+    color: #dc3545;
+}
